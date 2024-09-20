@@ -1,0 +1,272 @@
+Please enter NOTIFICATION_ID: 539368
+Current System Date
+
+SYSTEM_DATE                                                                                                                                  
+------------------------                                                                                                                     
+30-AUG-10 08:55:08                                                                                                                           
+
+Database Init.ora Parameter Values
+
+NAME                 VALUE                                                                                                                   
+-------------------- --------------------                                                                                                    
+job_queue_processes  2                                                                                                                       
+aq_tm_processes      1                                                                                                                       
+
+Workflow Queues
+
+OWNER    NAME                 QUEUE_TABLE          ENQUEUE DEQUEUE USER_COMMENT                                                              
+-------- -------------------- -------------------- ------- ------- --------------------------------------                                    
+APPS     WF_BPEL_Q            WF_BPEL_QTAB           YES     YES   Generic Queue for Business Event SOA I                                    
+                                                                   ntegration                                                                
+                                                                                                                                             
+APPLSYS  WF_JMS_JMS_OUT       WF_JMS_JMS_OUT         YES     YES   JMS deposit JMS Topics                                                    
+APPLSYS  WF_WS_JMS_IN         WF_WS_JMS_IN           YES     YES   WebServices Inbound JMS Topics                                            
+APPLSYS  WF_WS_JMS_OUT        WF_WS_JMS_OUT          YES     YES   WebServices Outbound JMS Topics                                           
+APPLSYS  WF_WS_SAMPLE         WF_WS_SAMPLE           YES     YES   WebServices Sample Topics                                                 
+APPLSYS  WF_DEFERRED_QUEUE_M  WF_DEFERRED_TABLE_M    YES     YES   Workflow Deferred Queue                                                   
+APPLSYS  WF_INBOUND_QUEUE     WF_INBOUND_TABLE       YES     YES   Workflow Inbound Queue                                                    
+APPLSYS  WF_JMS_IN            WF_JMS_IN              YES     YES   Workflow JMS Topics                                                       
+APPLSYS  WF_NOTIFICATION_OUT  WF_NOTIFICATION_OUT    YES     YES   Workflow JMS Topics                                                       
+APPLSYS  WF_NOTIFICATION_IN   WF_NOTIFICATION_IN     YES     YES   Workflow JMS Topics                                                       
+APPLSYS  WF_CONTROL           WF_CONTROL             YES     YES   Workflow JMS Topics                                                       
+APPLSYS  WF_JMS_OUT           WF_JMS_OUT             YES     YES   Workflow JMS Topics                                                       
+APPLSYS  WF_JAVA_DEFERRED     WF_JAVA_DEFERRED       YES     YES   Workflow Java Deferred Queue                                              
+APPLSYS  WF_JAVA_ERROR        WF_JAVA_ERROR          YES     YES   Workflow Java Error Queue                                                 
+APPLSYS  WF_OUTBOUND_QUEUE    WF_OUTBOUND_TABLE      YES     YES   Workflow Outbound Queue                                                   
+APPLSYS  WF_REPLAY_OUT        WF_REPLAY_OUT          YES     YES   Workflow event system default queue                                       
+APPLSYS  WF_IN                WF_IN                  YES     YES   Workflow event system default queue                                       
+APPLSYS  WF_ERROR             WF_ERROR               YES     YES   Workflow event system default queue                                       
+APPLSYS  WF_REPLAY_IN         WF_REPLAY_IN           YES     YES   Workflow event system default queue                                       
+APPLSYS  WF_OUT               WF_OUT                 YES     YES   Workflow event system default queue                                       
+APPLSYS  WF_SMTP_O_1_QUEUE    WF_SMTP_O_1_TABLE      YES     YES   [WORKFLOW_USER_QUEUE] - APPLSYS.WF_SMT                                    
+                                                                   P_O_1_QUEUE                                                               
+                                                                                                                                             
+APPLSYS  WF_DEFERRED          WF_DEFERRED            YES     YES   compile                                                                   
+
+22 rows selected.
+
+
+Session altered.
+
+WF_SMTP_O_1_TABLE for notification
+
+no rows selected
+
+
+Session altered.
+
+******* WF_NOTIFICATIONS *******
+
+  NOTIF_ID CONTEXT                     GROUP_ID STATUS    MAIL_STAT MES_TYPE MESSAGE_NAME                   ACCESS_KEY  PRI BEGIN_DATE       
+---------- ------------------------- ---------- --------- --------- -------- ------------------------------ ---------- ---- ----------       
+END_DATE   DUE_DATE        CALLBACK             RECIPIENT_ROLE RESPONDER          ORIGINAL_REC         FROM_USER                             
+---------- --------------- -------------------- -------------- ------------------ -------------------- ---------------                       
+TO_USER                        SUBJECT                                                                                                       
+------------------------------ ------------------------------------------------------------                                                  
+    539368 REQAPPRV:352067-17581:249     539368 OPEN      SENT      REQAPPRV PO_REQ_APPROVE_SIMPLE_JRAD     2247256074   50 30-AUG-10        
+           352                                                                                              4292105044                       
+                                                                                                            5959201810                       
+                                                                                                            776928452                        
+           01-SEP-10       WF_ENGINE.CB         NAHUM                             NAHUM                קליין, גלעד                           
+ויזלברג, נחום                  דרישת רכש 102483 עבור קליין, גלעד (1.00 ILS)                                                                  
+                                                                                                                                             
+
+******* USER ROLES *******
+
+ROLE_NAME            ROLE_SYS ROLE_SYS_ID USER_NAME                      USER_SYS USER_SYS_ID                                                
+-------------------- -------- ----------- ------------------------------ -------- -----------                                                
+NAHUM                PER             4162 NAHUM                          PER             4162                                                
+
+******* ROLES *******
+
+ROLE_NAME            DISPLAY_NAME              DESCRIPTION                    STATUS    EMAIL_ADDRESS                            NOTIF_PREF  
+-------------------- ------------------------- ------------------------------ --------- ---------------------------------------- ----------  
+LANGUAGE TERRITOR ORIG_SYS ORIG_SYS_ID EXPIR_DATE                                                                                            
+-------- -------- -------- ----------- ---------------                                                                                       
+NAHUM                ויזלברג, נחום             ויזלברג, נחום                  ACTIVE    nahum.wieselberg@tnuva.co.il             MAILHTML    
+HEBREW   ISRAEL   PER             4162                                                                                                       
+                                                                                                                                             
+
+******* USERS *******
+
+USER_NAME                      DISPLAY_NAME              DESCRIPTION                    STATUS    EMAIL_ADDRESS                              
+------------------------------ ------------------------- ------------------------------ --------- ----------------------------------------   
+NOTIF_PREF LANGUAGE TERRITOR ORIG_SYS ORIG_SYS_ID EXPIR_DATE                                                                                 
+---------- -------- -------- -------- ----------- ---------------                                                                            
+NAHUM                          ויזלברג, נחום             ויזלברג, נחום                  ACTIVE    nahum.wieselberg@tnuva.co.il               
+MAILHTML   HEBREW   ISRAEL   PER             4162                                                                                            
+                                                                                                                                             
+GILADK                         קליין, גלעד               קליין, גלעד                    ACTIVE    gilad.klein@tnuva.co.il                    
+MAILHTML   HEBREW   ISRAEL   PER             4165                                                                                            
+                                                                                                                                             
+
+******* MESSAGES *******
+
+MESSAGE                   DISPLAY_NAME                                        PRTY SUBJECT                                                   
+------------------------- -------------------------------------------------- ----- -------------------------------------------------------   
+TEXT_BODY                                                                                                                                    
+---------------------------------------------------------------------------------------------------------------------------------------------
+HTML_BODY                                                                                                                                    
+---------------------------------------------------------------------------------------------------------------------------------------------
+PO_REQ_APPROVE_SIMPLE_JRA Approve Requisition (Simplified) JRAD                 50 &DOCUMENT_TYPE_DISP &DOCUMENT_NUMBER for &PREPARER_DISP   
+D                                                                                  LAY_NAME (&TOTAL_AMOUNT_DSP)                              
+Text Body =                                                                                                                                  
+&REQ_LINES_FWK_RN                                                                                                                            
+                                                                                                                                             
+HTML Body =                                                                                                                                  
+&REQ_LINES_FWK_RN                                                                                                                            
+                                                                                                                                             
+
+******* MESSAGE ATTRIBUTES *******
+
+NAME                 DISPLAY_NAME                    SEQ TYPE     SUBTYPE VAL_TYPE DEFAULT_VALUE             FORMAT                          
+-------------------- ------------------------------ ---- -------- ------- -------- ------------------------- --------------------            
+OPEN_FORM_COMMAND    Open Document                     0 FORM     SEND    ITEMATTR OPEN_FORM_COMMAND                                         
+FUNCTIONAL_CURRENCY  Functional Currency               1 VARCHAR2 SEND    ITEMATTR FUNCTIONAL_CURRENCY                                       
+DOCUMENT_NUMBER      Requisition Number                2 VARCHAR2 SEND    ITEMATTR DOCUMENT_NUMBER           20                              
+DOCUMENT_TYPE_DISP   Document Type Display             3 VARCHAR2 SEND    ITEMATTR DOCUMENT_TYPE_DISP        240                             
+TOTAL_AMOUNT_DSP     Total Amount Display              4 VARCHAR2 SEND    ITEMATTR TOTAL_AMOUNT_DSP                                          
+PO_REQ_APPROVE_MSG   Approve Requisition Message       5 DOCUMENT SEND    ITEMATTR PO_REQ_APPROVE_MSG        _top                            
+REQ_LINES_DETAILS    Requisition lines details         6 DOCUMENT SEND    ITEMATTR REQ_LINES_DETAILS         _top                            
+ACTION_HISTORY       Action history of the document    7 DOCUMENT SEND    ITEMATTR ACTION_HISTORY            _top                            
+DOCUMENT_ID          Document Id                       8 NUMBER   SEND    ITEMATTR                                                           
+NOTE                 Note                              9 VARCHAR2 RESPOND ITEMATTR NOTE                      4000                            
+FORWARD_FROM_DISP_NA Forward From Display Name        10 VARCHAR2 SEND    ITEMATTR FORWARD_FROM_DISP_NAME    60                              
+ME                                                                                                                                           
+                                                                                                                                             
+#FROM_ROLE           From Role                        11 ROLE     SEND    ITEMATTR FORWARD_FROM_USER_NAME                                    
+PREPARER_DISPLAY_NAM PREPARER DISPLAY NAME            12 VARCHAR2 SEND    ITEMATTR PREPARER_DISPLAY_NAME                                     
+E                                                                                                                                            
+                                                                                                                                             
+#HDR_1               Description                      13 VARCHAR2 SEND    ITEMATTR REQ_DESCRIPTION                                           
+#HDR_2               Requisition Total                14 VARCHAR2 SEND    ITEMATTR REQ_AMOUNT_CURRENCY_DSP                                   
+#ATTACHMENTS         Attachment(s)                    15 DOCUMENT SEND    ITEMATTR ATTACHMENT                _top                            
+#HDR_3               Non-Recoverable Tax              16 VARCHAR2 SEND    ITEMATTR TAX_AMOUNT_CURRENCY_DSP                                   
+#HDR_4               Justification                    17 VARCHAR2 SEND    ITEMATTR JUSTIFICATION                                             
+XXTNV_REQ_LINES_FWK_ TNV Req Budget Framework Regio   18 DOCUMENT SEND    ITEMATTR XXTNV_REQ_LINES_FWK_RN    _top                            
+RN                   n                                                                                                                       
+                                                                                                                                             
+REQ_LINES_FWK_RN     Req Lines Framework Region       19 DOCUMENT SEND    ITEMATTR REQ_LINES_FWK_RN          _top                            
+APPROVAL_SEQUENCE_FW Approval Sequence Framework Re   20 DOCUMENT SEND    ITEMATTR APPROVAL_SEQUENCE_FWK_RN  _top                            
+K_RN                 gion                                                                                                                    
+                                                                                                                                             
+CONTRACTOR_REQUISITI Contractor Requisition Flag      21 VARCHAR2 SEND    ITEMATTR CONTRACTOR_REQUISITION_FL                                 
+ON_FLAG                                                                            AG                                                        
+                                                                                                                                             
+CONTRACTOR_STATUS    Contractor Status                22 VARCHAR2 SEND    ITEMATTR CONTRACTOR_STATUS                                         
+IS_AME_APPROVAL      is AME used for approval?        23 VARCHAR2 SEND    ITEMATTR IS_AME_APPROVAL                                           
+VIEW_REQ_DTLS_URL    View Requisition Details         24 URL      SEND    ITEMATTR VIEW_REQ_DTLS_URL         _top                            
+EDIT_REQ_URL         Edit Requisition                 25 URL      SEND    ITEMATTR EDIT_REQ_URL              _top                            
+VENDOR_DISPLAY_NAME  Vendor Name                      26 VARCHAR2 SEND    ITEMATTR VENDOR_DISPLAY_NAME                                       
+IS_SUPPLIER_EMAIL_NO Is Supplier email not availabl   27 VARCHAR2 SEND    ITEMATTR IS_SUPPLIER_EMAIL_NOT_AVA                                 
+T_AVAIL              e                                                             IL                                                        
+                                                                                                                                             
+CONTRACTOR_ASSIGNMEN Contractor Assignment Required   28 VARCHAR2 SEND    ITEMATTR CONTRACTOR_ASSIGNMENT_REQ                                 
+T_REQD                Flag                                                         D                                                         
+                                                                                                                                             
+#HISTORY             Action History Region            29 DOCUMENT SEND    ITEMATTR APPROVAL_SEQUENCE_FWK_RN  _top                            
+RESULT               Action                           30 LOOKUP   RESPOND CONSTANT APPROVE                   PO_DOC_APPROVE_ACTIO            
+                                                                                                             N_SIMPLE                        
+                                                                                                                                             
+
+31 rows selected.
+
+******* NOTIFICATION ACTIVITY *******
+
+NOTIFICATION            RESULT                    MESSAGE                   PLSQL_FUNCTION       VAL DISPLAY_NAME                            
+----------------------- ------------------------- ------------------------- -------------------- --- ------------------------------          
+PO_REQ_APPROVE_SIMPLE   PO_DOC_APPROVE_ACTION_SIM PO_REQ_APPROVE_SIMPLE_JRA PO_WF_REQ_NOTIFICATI Y   Approve Requisition Notificati          
+                        PLE                       D                         ON.POST_APPROVAL_NOT     on (Simplified)                         
+                                                                            IF                                                               
+                                                                                                                                             
+
+******* Notification Attributes *******
+
+no rows selected
+
+******* Notification Attribute Values *******
+
+  NOTIF_ID NAME                 NUMBER_VALUE DATE_VALUE      TEXT_VALUE                                                                      
+---------- -------------------- ------------ --------------- ------------------------------------------------------------                    
+    539368 #ATTACHMENTS                                                                                                                      
+    539368 #FROM_ROLE                                        GILADK                                                                          
+    539368 #HDR_1                                            נחום נסיון                                                                      
+    539368 #HDR_2                                            1.00 ILS                                                                        
+    539368 #HDR_3                                            0.00 ILS                                                                        
+    539368 #HDR_4                                                                                                                            
+    539368 #HISTORY                                          JSP:/OA_HTML/OA.jsp?OAFunc=ICX_POR_APPRV_SEQ_NTFN&reqHdrId=-                    
+                                                             &DOCUMENT_ID-&isAMEUsed=-&IS_AME_APPROVAL-                                      
+                                                                                                                                             
+    539368 ACTION_HISTORY                                    PLSQL:PO_WF_REQ_NOTIFICATION.GET_ACTION_HISTORY/REQAPPRV:352                    
+                                                             067-17581                                                                       
+                                                                                                                                             
+    539368 APPROVAL_SEQUENCE_FW                              JSP:/OA_HTML/OA.jsp?OAFunc=ICX_POR_APPRV_SEQ_NTFN&reqHdrId=-                    
+           K_RN                                              &DOCUMENT_ID-&isAMEUsed=-&IS_AME_APPROVAL-                                      
+                                                                                                                                             
+    539368 CONTRACTOR_ASSIGNMEN                                                                                                              
+           T_REQD                                                                                                                            
+                                                                                                                                             
+    539368 CONTRACTOR_REQUISITI                              N                                                                               
+           ON_FLAG                                                                                                                           
+                                                                                                                                             
+    539368 CONTRACTOR_STATUS                                 NULL                                                                            
+    539368 DOCUMENT_ID                352067                                                                                                 
+    539368 DOCUMENT_NUMBER                                   102483                                                                          
+    539368 DOCUMENT_TYPE_DISP                                דרישת רכש                                                                       
+    539368 EDIT_REQ_URL                                      JSP:/OA_HTML/OA.jsp?OAFunc=ICX_POR_LAUNCH_IP&porMode=approve                    
+                                                             rCheckout&porReqHeaderId=352067&_OrgId=82                                       
+                                                                                                                                             
+    539368 FORWARD_FROM_DISP_NA                              קליין, גלעד                                                                     
+           ME                                                                                                                                
+                                                                                                                                             
+    539368 FUNCTIONAL_CURRENCY                               ILS                                                                             
+    539368 IS_AME_APPROVAL                                   N                                                                               
+    539368 IS_SUPPLIER_EMAIL_NO                                                                                                              
+           T_AVAIL                                                                                                                           
+                                                                                                                                             
+    539368 NOTE                                                                                                                              
+    539368 OPEN_FORM_COMMAND                                 PO_POXRQERQ:P_REQUISITION_HEADER_ID=&DOCUMENT_ID P_MODE=MODI                    
+                                                             FY POXRQERQ_CALLING_FORM= POXSTNOT                                              
+                                                                                                                                             
+    539368 PO_REQ_APPROVE_MSG                                PLSQL:PO_WF_REQ_NOTIFICATION.GET_PO_REQ_APPROVE_MSG/REQAPPRV                    
+                                                             :352067-17581:&#NID                                                             
+                                                                                                                                             
+    539368 PREPARER_DISPLAY_NAM                              קליין, גלעד                                                                     
+           E                                                                                                                                 
+                                                                                                                                             
+    539368 REQ_LINES_DETAILS                                 PLSQL:PO_WF_REQ_NOTIFICATION.GET_REQ_LINES_DETAILS/REQAPPRV:                    
+                                                             352067-17581                                                                    
+                                                                                                                                             
+    539368 REQ_LINES_FWK_RN                                  JSP:/OA_HTML/OA.jsp?OAFunc=ICX_POR_REQLINES_NTFN&reqHdrId=-&                    
+                                                             DOCUMENT_ID-&contReqFlag=-&CONTRACTOR_REQUISITION_FLAG-&func                    
+                                                             Curr=-&FUNCTIONAL_CURRENCY-&contStatus=-&CONTRACTOR_STATUS-&                    
+                                                             supplEmailNotAvail=-&IS_SUPPLIER_EMAIL_NOT_AVAIL-&vendor=-&V                    
+                                                             ENDOR_DISPLAY_NAME-&contAssignReqd=-&CONTRACTOR_ASSIGNMENT_R                    
+                                                             EQD-                                                                            
+                                                                                                                                             
+    539368 RESULT                                            APPROVE                                                                         
+    539368 TOTAL_AMOUNT_DSP                                  1.00 ILS                                                                        
+    539368 VENDOR_DISPLAY_NAME                                                                                                               
+    539368 VIEW_REQ_DTLS_URL                                 JSP:/OA_HTML/OA.jsp?OAFunc=ICX_POR_LAUNCH_IP&porMode=viewReq                    
+                                                             &porReqHeaderId=352067&_OrgId=82&addBreadCrumb=Y                                
+                                                                                                                                             
+    539368 XXTNV_REQ_LINES_FWK_                              JSP:/OA_HTML/OA.jsp?OAFunc=XXTNV_PO_CHECK_BUDG_BALANCE&pReqH                    
+           RN                                                drId=-&DOCUMENT_ID-                                                             
+                                                                                                                                             
+
+31 rows selected.
+
+
+1 row updated.
+
+ERROR:
+ORA-06502: PL/SQL: numeric or value error: host bind array too small
+ORA-06512: at line 1 
+
+
+
+PL/SQL procedure successfully completed.
+
+
+Rollback complete.
+

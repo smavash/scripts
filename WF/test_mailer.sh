@@ -1,0 +1,1 @@
+$AFJVAPRG -classpath $AF_CLASSPATH -Ddebug=Y -Dprotocol=imap -Ddbcfile=/app/appl/PROD/inst/apps/PROD_uapapp1/appl/fnd/12.0.0/secure/PROD.dbc  -Dserver=exchange.com -Dport=143  -Daccount=wfusr  -Dpassword=pwd -Dconnect_timeout= 120  -Dfolder=INBOX oracle.apps.fnd.wf.mailer.Mailer 

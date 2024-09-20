@@ -1,0 +1,120 @@
+Current System Date
+
+SYSTEM_DATE                                                                                                                                  
+------------------------                                                                                                                     
+29-DEC-03 19:06:37                                                                                                                           
+
+Database Init.ora Parameter Values
+
+NAME                 VALUE                                                                                                                   
+-------------------- --------------------                                                                                                    
+job_queue_processes  10                                                                                                                      
+aq_tm_processes      2                                                                                                                       
+
+System Queue
+
+no rows selected
+
+REQUIRED GRANT
+
+GRANTEE    OWNER      PKG_NAME        GRANTOR    PRIVILEGE  GRANTABLE                                                                        
+---------- ---------- --------------- ---------- ---------- ---------                                                                        
+APPLSYS    SYS        DBMS_AQADM      SYSTEM     EXECUTE    NO                                                                               
+
+Workflow Queues
+
+OWNER      NAME                           QUEUE_TABLE          ENQUEUE DEQUEUE USER_COMMENT                                                  
+---------- ------------------------------ -------------------- ------- ------- --------------------------------------                        
+APPLSYS    WF_DEFERRED_QUEUE_M            WF_DEFERRED_TABLE_M    YES     YES   Workflow Deferred Queue                                       
+APPLSYS    WF_INBOUND_QUEUE               WF_INBOUND_TABLE       YES     YES   Workflow Inbound Queue                                        
+APPLSYS    WF_JMS_OUT                     WF_JMS_OUT             YES     YES   Workflow JMS Topics                                           
+APPLSYS    WF_CONTROL                     WF_CONTROL             YES     YES   Workflow JMS Topics                                           
+APPLSYS    WF_NOTIFICATION_OUT            WF_NOTIFICATION_OUT    YES     YES   Workflow JMS Topics                                           
+APPLSYS    WF_JMS_IN                      WF_JMS_IN              YES     YES   Workflow JMS Topics                                           
+APPLSYS    WF_NOTIFICATION_IN             WF_NOTIFICATION_IN     YES     YES   Workflow JMS Topics                                           
+APPLSYS    WF_OUTBOUND_QUEUE              WF_OUTBOUND_TABLE      YES     YES   Workflow Outbound Queue                                       
+APPLSYS    WF_DEFERRED                    WF_DEFERRED            YES     YES   Workflow event system default queue                           
+APPLSYS    WF_REPLAY_IN                   WF_REPLAY_IN           YES     YES   Workflow event system default queue                           
+APPLSYS    WF_IN                          WF_IN                  YES     YES   Workflow event system default queue                           
+APPLSYS    WF_OUT                         WF_OUT                 YES     YES   Workflow event system default queue                           
+APPLSYS    WF_REPLAY_OUT                  WF_REPLAY_OUT          YES     YES   Workflow event system default queue                           
+APPLSYS    WF_ERROR                       WF_ERROR               YES     YES   Workflow event system default queue                           
+APPLSYS    WF_SMTP_O_1_QUEUE              WF_SMTP_O_1_TABLE      YES     YES   [WORKFLOW_USER_QUEUE] - APPLSYS.WF_SMT                        
+                                                                               P_O_1_QUEUE                                                   
+                                                                                                                                             
+
+15 rows selected.
+
+Summary of WF DEFERRED Queue
+
+CORRID       STATE              COUNT                                                                                                        
+------------ ------------- ----------                                                                                                        
+APPS:oracle. 2 = Retained         259                                                                                                        
+apps.wf.noti                                                                                                                                 
+fication.sen                                                                                                                                 
+d                                                                                                                                            
+                                                                                                                                             
+APPS:oracle. 2 = Retained          72                                                                                                        
+apps.wf.noti                                                                                                                                 
+fication.can                                                                                                                                 
+cel                                                                                                                                          
+                                                                                                                                             
+                           ----------                                                                                                        
+sum                               331                                                                                                        
+
+AQ$_WF_DEFERRED_S (SUBSCRIBER INFORMATION)
+
+  COUNT(*)                                                                                                                                   
+----------                                                                                                                                   
+         3                                                                                                                                   
+
+AQ$_WF_DEFERRED_T (TRANSACTION? INFORMATION)
+
+  COUNT(*)                                                                                                                                   
+----------                                                                                                                                   
+       331                                                                                                                                   
+
+AQ$_WF_DEFERRED_H (HISTORICAL INFORMATION)
+
+  COUNT(*)                                                                                                                                   
+----------                                                                                                                                   
+       331                                                                                                                                   
+
+AQ$_WF_DEFERRED_I (??? INFORMATION)
+
+  COUNT(*)                                                                                                                                   
+----------                                                                                                                                   
+         0                                                                                                                                   
+
+WF_DEFERRED QUEUE TABLE
+
+  COUNT(*)                                                                                                                                   
+----------                                                                                                                                   
+       331                                                                                                                                   
+
+DBA_QUEUE_SCHEDULES
+
+no rows selected
+
+AQ$_SCHEDULES
+
+no rows selected
+
+DBA_JOBS
+
+    JOB WHAT                                          LOG_USR PRIV_USR SCHMA_USR NEXT_DATE       NEXT_SEC                 LAST_DATE          
+------- --------------------------------------------- ------- -------- --------- --------------- ------------------------ ---------------    
+LAST_SEC                 THIS_DATE       THIS_SEC                 TOTAL_TIME BROKEN INTERVAL                            FAILS                
+------------------------ --------------- ------------------------ ---------- ------ ------------------------------ ----------                
+     81 ASG_MOBTRAN.process_queue_transaction;        APPS    APPS     APPS      01-JAN-00       00:00:00                                    
+                                                                           0 Y      sysdate+(10/(24*60*60))                                  
+                                                                                                                                             
+    547 Wf_Event.Listen('WF_ERROR');                  APPS    APPS     APPS      01-JAN-00       00:00:00                 21-DEC-03          
+14:27:29                                                                1569 Y      Wf_Setup.JobNextRunDate(547,0,         16                
+                                                                                    0,10,0)                                                  
+                                                                                                                                             
+     61 FND_SVC_COMPONENT.EXECUTE_REQUEST (p_componen APPS    APPS     APPS      29-DEC-03       19:07:53                 29-DEC-03          
+        t_request_id => 10000);                                                                                                              
+19:02:53                                                                1383 N      SYSDATE + (5/(24*60))                   0                
+                                                                                                                                             
+
