@@ -1,0 +1,19 @@
+
+
+***********************************************************************
+Fatal NI connect error 12537, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=uapdb1.tnuva.co.il)(PORT=1620))(CONNECT_DATA=(SID=PROD)(CID=(PROGRAM=sqlplus@uaperp2)(HOST=uaperp2)(USER=applprd))))
+
+  VERSION INFORMATION:
+	TNS for Linux: Version 10.1.0.5.0 - Production
+	TCP/IP NT Protocol Adapter for Linux: Version 10.1.0.5.0 - Production
+  Time: 05-SEP-2010 10:47:15
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12537
+    TNS-12537: TNS:connection closed
+    ns secondary err code: 12560
+    nt main err code: 507
+    TNS-00507: Connection closed
+    nt secondary err code: 0
+    nt OS err code: 0

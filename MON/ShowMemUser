@@ -1,0 +1,1 @@
+ps auxw | sort | awk 'BEGIN {i=0}; NF > 6 {x[$1]+=$6; if (y[i]!=$1 ) {i++;y[i]=$1}}; END { for (j=0; j<=i; j++){print y[j], x[y[j]]/1000 " Mega"; a+=x[y[j]]/1000000};print "Total memory in GegaByte",a}'

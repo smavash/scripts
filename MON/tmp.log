@@ -1,0 +1,8 @@
++ telnet wmrch10.tnuva.co.il 143
+Trying 140.4.21.7...
+Connected to wmrch10.tnuva.co.il (140.4.21.7).
+Escape character is '^]'.
+* OK The Microsoft Exchange IMAP4 service is ready.
+Connection closed by foreign host.
++ echo 'Test IMAP connection done '
+Test IMAP connection done 

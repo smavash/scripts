@@ -1,0 +1,15 @@
+*************************************************************************                           
+07/04/2017 03:34:01 , ulmutdb01 , PROD                                                              
+-----------------------------------------------------------------------                             
+----------- Pair No 1 -------------------------------------                                         
+You have a problem to Determine detailed data of the session which was CAUSE of the lock (ORA-01403:
+no data found)                                                                                      
+Cause of lock is a Form  : Concurrent Request                                                       
+You got an error ORA-01403: no data found                                                           
+Alter System Kill Session '1112,21263';                                                             
+*****************************************                                                           
+Concurrent Request that Wait for lock : 31677004                                                    
+Request name                          : Planning ODS Load Worker                                    
+Actual start date                     : 07-Apr-2017 03:33:45                                        
+Requested by user                     : MUTINTER(יוזר ממשקים)                                       
+sid & serial#                         : 606 & 33697                                                 

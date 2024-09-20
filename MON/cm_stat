@@ -1,0 +1,32 @@
+#!/usr/bin/ksh
+
+. ~/.profile
+
+MAILLIST_ALL=slava.mavashev@tnuva.co.il
+
+DATE=`date +"%d-%b-%Y-%H%M"`
+ALL_REPORTS="/tmp"
+APPSPWD=`env|grep APPLPWD= |awk -F= '{print $2}'`
+
+sqlplus -s <<!
+APPS/$APPSPWD
+
+select concurrent_queue_name,
+       count(decode(phase_code,'R','X',NULL))	Running,
+       count(decode(phase_code,'P','X',NULL))	Pending,
+       count(decode(phase_code,'P',NULL,'R',NULL,'X'))	Other
+from FND_CONCURRENT_WORKER_REQUESTS
+where hold_flag <> 'Y'
+and   requested_start_date <= sysdate
+group by concurrent_queue_name
+/
+exit
+!
+
+
+
+echo ""
+echo ""
+echo "Status as of `date`"
+echo ""
+

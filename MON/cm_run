@@ -1,0 +1,49 @@
+#!/usr/bin/ksh
+
+. ~/.profile
+
+MAILLIST_ALL=slava.mavashev@tnuva.co.il
+export MAXPARALLEL=30
+
+DATE=`date +"%d-%b-%Y-%H%M"`
+ALL_REPORTS="/tmp"
+REPORT="${ALL_REPORTS}/CM_run_${DATE}.txt"
+APPSPWD=`env|grep APPLPWD= |awk -F= '{print $2}'`
+
+sqlplus -s <<!
+APPS/$APPSPWD
+set pagesize 24 echo off feed off linesize 130
+col qname format a9  heading 'Manager' trunc
+col sdate format a12 heading 'Start Time'
+col reqid format 999999999 heading 'ReqID'
+col osid format a8 heading 'OSprocID' 
+col un format a45 heading 'Program Name'
+col qn format a15 heading 'Queue Name'
+
+
+spool $REPORT
+
+Select /*+ RULE */
+	To_Char(fwrk.Actual_Start_Date, 'DD-MON HH24:MI') sdate,
+	fcr.os_process_id osid,
+	fwrk.REQUEST_ID,
+	fwrk.CONCURRENT_QUEUE_NAME qn,
+      	DECODE (fwrk.DESCRIPTION,
+      		NULL,
+      		USER_CONCURRENT_PROGRAM_NAME,
+      	fwrk.DESCRIPTION||' ('||USER_CONCURRENT_PROGRAM_NAME||')') un ,
+       	decode(fwrk.phase_code,'R','Running','P','Pending','Other') state
+from 
+	FND_CONCURRENT_WORKER_REQUESTS fwrk,
+     	Fnd_Concurrent_requests fcr
+where 
+      		fwrk.PHASE_CODE = 'R'
+      		-- fwrk.PHASE_CODE != 'C'
+	and    fwrk.hold_flag <> 'Y'
+	and fwrk.request_id = fcr.request_id
+order by state desc, fwrk.Actual_Start_Date
+/
+spool off
+
+exit
+!

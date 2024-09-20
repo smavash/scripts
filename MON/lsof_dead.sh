@@ -1,0 +1,1 @@
+lsof -s | grep deleted
